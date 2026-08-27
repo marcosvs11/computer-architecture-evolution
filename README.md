@@ -56,3 +56,6 @@ Every week students will:
 ## Final Product
 
 A public digital museum describing the evolution of computer architectures.
+
+
+teste
