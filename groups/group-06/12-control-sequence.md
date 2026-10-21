@@ -8,7 +8,7 @@ A pesquisa deve explicar o controle e a sequência de operações em termos gera
 
 O fluxo `Fetch → Decode → Execute → Write Back` só deve aparecer se for identificado como um modelo didático adequado ao exemplo, e não como regra universal. A simultaneidade entre busca de instruções e acesso a dados depende da implementação.
 
-Cada integrante deve pesquisar e redigir sua seção, usar fontes acadêmicas, técnicas ou oficiais confiáveis, indicar no texto quais afirmações cada fonte sustenta e acrescentar suas referências ao arquivo `references.md`. Escrevam de forma compatível com as demais seções, sem atribuir à Harvard características de um processador específico.
+Cada integrante fica responsável por uma seção principal, com texto breve e focado, pelo menos uma fonte confiável e referência registrada em `references.md`. Todos devem revisar a seção de outro integrante antes da consolidação. O exemplo e a representação visual ficam com Marcos, conforme a divisão combinada. Escrevam sem atribuir à Harvard características de um processador específico.
 
 ## 12.1 Início da Operação e Participação Humana
 
@@ -18,7 +18,7 @@ Cada integrante deve pesquisar e redigir sua seção, usar fontes acadêmicas, t
 
 Pesquisar como um programa, comando, entrada ou evento externo pode dar início a uma tarefa em um sistema computacional. Distinguir a participação humana no nível da tarefa — por exemplo, solicitar uma operação ou fornecer dados — do controle interno contínuo feito pelo processador. Não afirmar que uma pessoa coordena cada ciclo de instrução, nem presumir um mecanismo específico de inicialização para todos os sistemas.
 
-**Entrega individual:** texto curto explicativo, com pelo menos uma fonte confiável e referência registrada em `references.md`.
+**Entrega individual:** texto breve e focado, com pelo menos uma fonte confiável e referência registrada em `references.md`.
 
 ## 12.2 Busca da Instrução e Escolha da Próxima Operação
 
@@ -28,7 +28,7 @@ Pesquisar como um programa, comando, entrada ou evento externo pode dar início 
 
 Explicar, em um modelo geral, o papel do endereço da próxima instrução e da memória de instruções. Descrever o avanço sequencial esperado quando não há mudança de fluxo e indicar que uma condição ou instrução de desvio pode levar a outro endereço. Se usar o termo contador de programa (PC), defini-lo e deixar claro que esse nome e os detalhes de atualização pertencem ao modelo de processador descrito, não à definição de Harvard.
 
-**Entrega individual:** texto curto explicativo, com pelo menos uma fonte confiável e referência registrada em `references.md`.
+**Entrega individual:** texto breve e focado, com pelo menos uma fonte confiável e referência registrada em `references.md`.
 
 ## 12.3 Mecanismos de Controle
 
@@ -38,7 +38,7 @@ Explicar, em um modelo geral, o papel do endereço da próxima instrução e da 
 
 Pesquisar o papel funcional da Unidade de Controle na interpretação da instrução e na coordenação de ações, como selecionar operandos, orientar uma operação da ULA e indicar leituras ou escritas. Distinguir sinais de controle de caminhos que transportam dados ou instruções. Não definir circuitos, sinais ou fases específicos como obrigatórios em toda implementação Harvard.
 
-**Entrega individual:** texto curto explicativo, com pelo menos uma fonte confiável e referência registrada em `references.md`.
+**Entrega individual:** texto breve e focado, com pelo menos uma fonte confiável e referência registrada em `references.md`.
 
 ## 12.4 Sincronização, Repetições e Mudanças no Fluxo
 
@@ -48,7 +48,7 @@ Pesquisar o papel funcional da Unidade de Controle na interpretação da instru�
 
 Pesquisar sincronização temporal em processadores síncronos, repetição por laços e mudanças de fluxo por condições ou desvios. Definir clock antes de usá-lo e registrar que sua frequência e seu funcionamento são detalhes da implementação. Explicar desvios de forma conceitual; não presumir registradores de flags, instruções ou regras de desvio de uma ISA específica.
 
-**Entrega individual:** texto curto explicativo, com pelo menos uma fonte confiável e referência registrada em `references.md`.
+**Entrega individual:** texto breve e focado, com pelo menos uma fonte confiável e referência registrada em `references.md`.
 
 ## 12.5 Exemplo de Operação e Representação da Sequência
 
@@ -56,19 +56,23 @@ Pesquisar sincronização temporal em processadores síncronos, repetição por 
 
 **Função da seção:** atender ao exemplo obrigatório da Issue e tornar a ordem das etapas fácil de acompanhar.
 
-Usar uma operação didática, como somar dois valores e guardar o resultado. Apresentar a sequência do início ao resultado, identificando quando ocorre busca da instrução, interpretação, obtenção dos operandos, cálculo e armazenamento. Se usar uma notação como `R ← A + B`, identificá-la como pseudocódigo, não como instrução de uma ISA real. Produzir uma representação visual simples da sequência, se ela ajudar a leitura, e incluir legenda. Não garantir acessos simultâneos nem fixar a quantidade de ciclos.
+Usar uma operação didática, como somar dois valores e guardar o resultado. Apresentar a sequência do início ao resultado, identificando quando ocorre busca da instrução, interpretação, obtenção dos operandos, cálculo e armazenamento. Se usar uma notação como `R ← A + B`, identificá-la como pseudocódigo, não como instrução de uma ISA real. Produzir uma representação visual simples da sequência e incluir legenda. Não garantir acessos simultâneos nem fixar a quantidade de ciclos.
 
-**Entrega individual:** exemplo passo a passo, representação visual com legenda se utilizada, fontes que sustentem a explicação e referências registradas em `references.md`.
+**Entrega individual:** exemplo passo a passo, representação visual com legenda, fonte(s) que sustentem a explicação e referências registradas em `references.md`.
 
-## 12.6 Condições de Encerramento e Revisão Técnica
+## 12.6 Condições de Encerramento
 
 **Responsável: Victor Francisco Rodrigues Pereira Melo**
 
-**Função da seção:** explicar quando a operação ou tarefa considerada termina e revisar a consistência técnica do conjunto.
+**Função da seção:** explicar quando a operação ou tarefa considerada termina.
 
-Pesquisar como reconhecer a conclusão de uma operação ou tarefa em termos gerais, distinguindo o término de uma instrução, de uma tarefa e do programa. Explicar que o processador pode prosseguir para outra instrução, aguardar ou encerrar a execução conforme o sistema e a implementação. Ao revisar o arquivo, verificar se as seções respondem à Issue, se as fontes estão registradas e se nenhuma característica específica foi apresentada como obrigatória para toda a Arquitetura Harvard.
+Pesquisar como reconhecer a conclusão de uma operação ou tarefa em termos gerais, distinguindo o término de uma instrução, de uma tarefa e do programa. Explicar que, depois de uma operação, o processador pode prosseguir para outra instrução, aguardar ou encerrar a execução conforme o sistema e a implementação. Não apresentar um mecanismo de encerramento específico como obrigatório em toda Arquitetura Harvard.
 
-**Entrega individual:** texto curto explicativo, com pelo menos uma fonte confiável e referência registrada em `references.md`, além da revisão de coerência técnica das seções.
+**Entrega individual:** texto breve e focado, com pelo menos uma fonte confiável e referência registrada em `references.md`.
+
+## Revisão entre integrantes
+
+Antes de consolidar, cada integrante deve revisar a seção de outra pessoa: conferir clareza, coerência com a Harvard clássica, afirmações sustentadas por fontes e referências registradas. A revisão é compartilhada; não fica sob responsabilidade exclusiva de uma pessoa.
 
 ## Referências da entrega
 
