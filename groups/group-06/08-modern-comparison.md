@@ -1,23 +1,21 @@
-# 8. Modern Comparison
+# 8. Integração, Limitações e Desempenho
 
-Compare your architecture with a modern processor.
+## 8.1 Integração dos Componentes e Decisões Arquiteturais
 
-## CPU
+## 8.2 Características Favoráveis e Benefícios Condicionais
 
-## Memory
+## 8.3 Comunicação e Paralelismo, Quando Aplicável
+Na organização Harvard clássica, as instruções e os dados ocupam espaços de memória separados e utilizam caminhos de comunicação independentes com o processador. Assim, a busca de uma instrução não precisa usar o mesmo caminho empregado por uma leitura ou escrita na memória de dados. Essa organização pode permitir que a busca de instruções e um acesso a dados ocorram de forma sobreposta, desde que a implementação consiga atender às duas operações nesse intervalo.
 
-## Bus
+Essa possibilidade representa independência entre acessos às memórias; não significa, por si só, que duas instruções sejam executadas ao mesmo tempo. A ocorrência e o benefício da sobreposição dependem de fatores da implementação, como a organização das memórias, a capacidade de atender acessos simultâneos, a latência e o controle do processador. Portanto, a separação dos caminhos aumenta o potencial de paralelismo de acesso, mas não garante simultaneidade nem um ganho fixo de desempenho.
 
-## Performance
+A arquitetura Harvard também não implica automaticamente o uso de pipeline. Pipeline é uma escolha de implementação que divide a execução em etapas e permite sobrepor etapas de instruções diferentes. Para isso, são necessários mecanismos próprios de controle e tratamento de dependências. A separação entre os caminhos de instruções e dados pode favorecer essa organização, mas não a determina.
 
-## Energy Consumption
+A independência dos caminhos pode reduzir a disputa pelo mesmo caminho de comunicação entre instruções e dados. Ainda assim, não elimina todos os possíveis gargalos: o desempenho continua condicionado à implementação e às operações realizadas.
 
-## Applications
+## 8.4 Desempenho e Capacidade de Processamento
 
-## Advantages
+## 8.5 Armazenamento, Limitações e Gargalos
 
-## Disadvantages
+## 8.6 Contexto de Uso e Resposta à Questão Central
 
-## Comparison Table
-
-| Feature | Historical | Modern |
