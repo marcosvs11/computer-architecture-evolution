@@ -24,7 +24,28 @@ A coordenação temporal e o controlo da ordem das operações num sistema de pr
 * **Sincronização e o Papel do Clock:** Em processadores síncronos, a harmonia e o avanço das operações são regidos por um sinal de *clock* (relógio). O *clock* consiste num gerador de impulsos elétricos periódicos que estabelece o ritmo base do sistema; cada ciclo ou pulso sincroniza os circuitos internos, garantindo que as transições de estado e a propagação de sinais ocorrem de forma ordenada e coordenada.
 * **Repetições e Estruturas de Laços (*Loops*):** A execução iterativa de uma mesma tarefa ou conjunto de instruções obtém-se através da repetição controlada do fluxo. Isto permite que o sistema processe blocos de dados homogéneos ou realize operações cíclicas direcionando novamente a execução para instruções previamente lidas.
 * **Mudanças no Fluxo e Desvios:** Embora a execução siga habitualmente uma progressão sequencial predefinida, o fluxo pode sofrer alterações dinâmicas. Os mecanismos de desvio possibilitam que a ordem de execução seja redirecionada para um ponto distinto da sequência, alterando o próximo passo do processamento em função de regras operacionais do sistema.
+
 ## 12.5 Exemplo de Operação e Sequência de Execução
+Para ilustrar o controle e a sequência de operações em um modelo didático com organização Harvard, considere a soma de dois valores, A e B, seguida do armazenamento do resultado em C. Antes do início da sequência, o programa está na memória de instruções, os valores A e B estão na memória de dados e o contador de programa (PC) aponta para a primeira instrução. Os registradores R1, R2 e R3 são nomes simbólicos usados apenas neste exemplo.
+
+A sequência pode ser representada pelas pseudoinstruções `LOAD A`, `LOAD B`, `ADD R1, R2` e `STORE R3, C`. Esses nomes descrevem as ações pretendidas; não representam instruções obrigatórias da Arquitetura Harvard nem uma ISA específica.
+
+1. **Condição inicial:** o programa e os dados já estão armazenados em seus espaços de memória. A execução é iniciada e o PC indica onde buscar a primeira instrução.
+2. **Busca e interpretação de `LOAD A`:** o PC fornece à memória de instruções o endereço da próxima instrução. A instrução retornada é encaminhada à unidade de controle, que identifica a operação solicitada.
+3. **Leitura de A:** a unidade de controle solicita a leitura do endereço simbólico A na memória de dados. O valor retornado é armazenado temporariamente em R1.
+4. **Busca e interpretação de `LOAD B`:** o processador busca a instrução seguinte na memória de instruções e a unidade de controle identifica a operação de leitura de B.
+5. **Leitura de B:** o valor localizado no endereço simbólico B é lido da memória de dados e armazenado temporariamente em R2.
+6. **Busca e execução de `ADD R1, R2`:** o processador busca e interpreta a pseudoinstrução. A unidade de controle direciona os valores de R1 e R2 à ULA e seleciona a soma. O resultado é armazenado em R3.
+7. **Busca e interpretação de `STORE R3, C`:** o processador busca a instrução de armazenamento e a unidade de controle identifica R3 como origem do valor e C como destino.
+8. **Gravação do resultado:** o conteúdo de R3 é escrito no endereço simbólico C da memória de dados. A operação ilustrada termina quando C contém a soma de A e B.
+
+Como não há desvio nem repetição neste exemplo, o fluxo segue para a instrução seguinte do programa. O PC avança de acordo com a implementação; não se pressupõe aqui um tamanho específico de instrução ou uma regra fixa de incremento. O fim desta operação também não significa necessariamente que o programa inteiro terminou: ele pode continuar com outras instruções.
+
+A sequência descreve dependências lógicas entre as ações, não ciclos de clock. A organização Harvard separa os caminhos de instruções e dados e pode permitir acessos independentes; se eles ocorrem simultaneamente depende da implementação. Registradores, ULA, PC, unidade de controle e pseudoinstruções são elementos do modelo ilustrativo, não características que definem, por si só, a Arquitetura Harvard.
+
+[Figura 1 — Sequência da soma de A e B e armazenamento do resultado em C](images/harvard-sequencia-operacao-soma.png)
+
+*Figura 1 — Fluxo da operação A + B → C em um modelo didático da organização Harvard clássica. As setas azuis representam o caminho de instruções, as verdes o caminho de dados e as tracejadas laranja os sinais de controle. Os números indicam ordem lógica, não ciclos de clock. Fonte: elaboração própria.*
 
 ## 12.6 Condições de Encerramento
 O reconhecimento do fim de um processo no hardware ocorre em diferentes níveis hierárquicos de execução:
