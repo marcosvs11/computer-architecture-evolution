@@ -1,6 +1,7 @@
 # 8. Integração, Limitações e Desempenho
 
 ## 8.1 Integração dos Componentes e Decisões Arquiteturais
+Na Arquitetura de Harvard, a integração dos componentes acontece por meio da comunicação entre a memória de instruções, a memória de dados e o processador, utilizando caminhos de comunicação separados. A memória de instruções armazena os comandos que determinam as operações a serem executadas, enquanto a memória de dados guarda os valores utilizados durante o processamento. O processador coordena essas informações por meio da unidade de controle, dos registradores e da Unidade Lógica e Aritmética (ULA). Durante a execução, a unidade de controle busca e interpreta uma instrução, os dados necessários são acessados pela via correspondente e a ULA realiza as operações solicitadas. Os resultados podem permanecer nos registradores ou ser armazenados na memória de dados, conforme a instrução executada. Como os caminhos de acesso às instruções e aos dados são independentes, o sistema pode buscar uma nova instrução enquanto acessa os dados necessários à operação atual, desde que a implementação permita. Essa organização reduz a disputa pelo uso de um único caminho de comunicação e pode aumentar o desempenho do processamento. A principal decisão arquitetural da organização Harvard é, portanto, manter instruções e dados em espaços de memória distintos, com caminhos de acesso próprios, permitindo maior independência entre a busca das instruções e o acesso aos dados.
 
 ## 8.2 Características Favoráveis e Benefícios Condicionais
 
