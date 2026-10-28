@@ -16,6 +16,10 @@ A independência dos caminhos pode reduzir a disputa pelo mesmo caminho de comun
 ## 8.4 Desempenho e Capacidade de Processamento
 
 ## 8.5 Armazenamento, Limitações e Gargalos
+A adoção da organização Harvard acarreta implicações diretas sobre a estrutura de armazenamento e introduz condicionantes específicos de desempenho:
 
+* **Impacto da Separação no Armazenamento:** A divisão física entre os espaços de programa e de dados obriga a que qualquer alteração estrutural no volume de instruções ou na quantidade de variáveis guardadas exija recursos de hardware distintos e dedicados, impedindo a partilha flexível do mesmo bloco de memória física entre código e dados.
+* **Limitações do Modelo e Decisões de Implementação:** É essencial distinguir as restrições conceptuais da arquitetura das limitações físicas impostas por uma implementação concreta. Enquanto o modelo Harvard assegura a separação lógica e de caminhos, aspetos como a **capacidade máxima**, a **tecnologia de suporte** (seja fita perfurada eletromecânica, relés ou semicondutores modernos) e a **velocidade de acesso** dependem estritamente das escolhas de projeto de cada sistema.
+* **Gargalos Operacionais:** Restrições como o tempo de resposta dos componentes de armazenamento ou a largura de banda dos canais dedicados continuam a influenciar o fluxo de execução. Consequentemente, o desempenho global permanece condicionado pela sincronização entre a velocidade de leitura das instruções e a capacidade de processamento e retenção dos dados nas unidades de cálculo.
 ## 8.6 Contexto de Uso e Resposta à Questão Central
 
