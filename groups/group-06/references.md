@@ -43,3 +43,4 @@ https://www.tme.com/br/pt/news/library-articles/page/56104/arquitetura-de-von-ne
 
  Massachusetts Institute of Technology, “Lab 5: RISC-V Introduction—Multi-Cycle and Two-Stage Pipeline,” *6.175: Constructive Computer Architecture*. [Online]. Disponível em: https://csg.csail.mit.edu/6.175/labs/lab5-riscv-intro.html. Acesso em: 28 out. 2026.
  - TANENBAUM, Andrew S. *Organização Estruturada de Computadores*. 6. ed. São Paulo: Pearson, 2013.
+https://onlinedocs.microchip.com/oxy/GUID-74578654-4F5F-4B29-9F3C-6C3B1F1DF670-en-US-2/GUID-AA5CC158-9A54-4C01-A3E3-47AABEEF987C.html
