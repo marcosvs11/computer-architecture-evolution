@@ -16,6 +16,26 @@ A independência dos caminhos pode reduzir a disputa pelo mesmo caminho de comun
 
 ## 8.4 Desempenho e Capacidade de Processamento
 
+A análise de desempenho sob a Arquitetura de Harvard baseia-se na separação física e funcional entre a memória de instruções (código) e a memória de dados. Essa estrutura elimina gargalos tradicionais de acesso concorrente, permitindo otimizações diretas no fluxo de execução do processador.
+
+1. Fatores Críticos que Influenciam o Desempenho na Arquitetura de Harvard
+O rendimento de um sistema baseado na Arquitetura de Harvard é determinado por fatores específicos do seu arranjo estrutural:
+
+Barramentos Separados (Instruções e Dados): A existência de barramentos independentes de endereço e dados permite a busca da próxima instrução simultaneamente à leitura e escrita de dados em memória, reduzindo os tempos de ciclo por instrução (CPI).
+
+Eficiência do Pipelining: O paralelismo no nível de instrução é altamente favorecido, pois o conflito de acesso à memória entre as etapas de Fetch (busca de instrução) e Memory Access (acesso a dados) é naturalmente eliminado.
+
+Largura de Banda e Latência Diferenciadas: Permite configurar memórias de tipos, velocidades e larguras de barramento distintas para instruções (frequentemente ROM/Flash mais rápida ou otimizada para leitura) e dados (RAM de leitura/escrita).
+
+Complexidade do Conjunto de Instruções (ISA): Arquiteturas Harvard são amplamente combinadas com filosofias RISC (ex.: AVR, ARM Cortex-M), onde instruções com tamanho fixo maximizam a velocidade do ciclo de busca.
+
+2. Potencial da Organização e Resultados de Implementação
+Ao projetar ou implementar sistemas baseados em Arquitetura de Harvard (como em sistemas embarcados, DSPs ou microcontroladores), deve-se diferenciar o limite teórico do resultado operacional:
+
+Potencial da Organização (Capacidade Teórica): O limite de processamento determinado pela especificação da arquitetura, como a frequência máxima de clock, a vazão teórica do pipeline (ex.: 1 instrução por ciclo em condições ideais) e a largura total combinada dos barramentos de instruções e dados.
+
+Resultados de Implementação: O desempenho real obtido na prática, afetado por desvios/ramificações no código (branch mispredictions), conflitos de dependência de dados (data hazards), latência real dos periféricos e eficiência dos compiladores em gerar código paralelizável.
+
 ## 8.5 Armazenamento, Limitações e Gargalos
 A adoção da organização Harvard acarreta implicações diretas sobre a estrutura de armazenamento e introduz condicionantes específicos de desempenho:
 
