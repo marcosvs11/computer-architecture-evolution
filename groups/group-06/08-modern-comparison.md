@@ -43,14 +43,11 @@ A adoção da organização Harvard acarreta implicações diretas sobre a estru
 * **Limitações do Modelo e Decisões de Implementação:** É essencial distinguir as restrições conceptuais da arquitetura das limitações físicas impostas por uma implementação concreta. Enquanto o modelo Harvard assegura a separação lógica e de caminhos, aspetos como a **capacidade máxima**, a **tecnologia de suporte** (seja fita perfurada eletromecânica, relés ou semicondutores modernos) e a **velocidade de acesso** dependem estritamente das escolhas de projeto de cada sistema.
 * **Gargalos Operacionais:** Restrições como o tempo de resposta dos componentes de armazenamento ou a largura de banda dos canais dedicados continuam a influenciar o fluxo de execução. Consequentemente, o desempenho global permanece condicionado pela sincronização entre a velocidade de leitura das instruções e a capacidade de processamento e retenção dos dados nas unidades de cálculo.
 ## 8.6 Contexto de Uso e Resposta à Questão Central
-Resposta à Questão Central Com base na síntese dos resultados obtidos, o modelo Harvard mantém sua extrema relevância ao resolver o clássico "gargalo de von Neumann" através da separação dos barramentos e memórias de dados e instruções. Essa característica permite o acesso simultâneo a ambos em um único ciclo de clock.
-Nos sistemas modernos, a indústria consolidou o uso da Arquitetura Harvard Modificada, que domina:
-	•	O mercado de sistemas embarcados;
-	•	Processadores de Sinal Digital (DSPs);
-	•	Microcontroladores (onde a previsibilidade e eficiência são cruciais);
-	•	As memórias Cache L1 (divididas fisicamente em dados e instruções) na arquitetura interna dos processadores modernos de uso geral.
-Características Exclusivas do Mark I Para assegurar a precisão técnica da comparação entre as eras, as seguintes características operacionais e limitações foram levantadas e assinaladas como pertencentes exclusivamente à máquina histórica Mark I, não representando o modelo Harvard moderno:
-	•	Implementação Eletromecânica: Funcionamento baseado em relés, interruptores e eixos mecânicos movidos a motor, em contraste direto com a microeletrônica de estado sólido da atualidade.
-	•	Instruções via Fita Perfurada: Leitura sequencial de instruções a partir de uma fita de papel externa (read-only), o que tornava saltos condicionais e laços ineficientes (ao contrário do armazenamento flexível em memórias Flash ou ROM modernas).
-	•	Aritmética Base 10: Cálculos acumulativos realizados estritamente no sistema decimal mecânico (utilizando rodas dentadas), em oposição à lógica booleana e ao sistema binário universais de hoje.
+Respondendo à questão central sobre como esta arquitetura se compara e se insere nos sistemas modernos, o modelo Harvard mantém a sua relevância por resolver o "gargalo de von Neumann". A separação dos caminhos permite o acesso simultâneo a dados e instruções num único ciclo de *clock*. Atualmente, a indústria consolidou o uso da **Arquitetura Harvard Modificada**, que domina o mercado de sistemas embutidos, processadores de sinal digital (DSPs) e microcontroladores, além de ser aplicada internamente nas memórias Cache L1 dos processadores modernos de uso geral.
 
+**Características Específicas Pertencentes ao Mark I**
+Para preservar a precisão técnica da comparação, as seguintes características operacionais e limitações devem ser assinaladas como pertencentes **exclusivamente à máquina histórica Mark I**, e não ao modelo Harvard moderno:
+
+* **Implementação Eletromecânica:** Funcionamento baseado em relés, interruptores e eixos mecânicos movidos a motor, em forte contraste com a microeletrónica de estado sólido atual.
+* **Instruções via fita perfurada:** A leitura sequencial de instruções através de uma fita de papel externa (*read-only*), o que tornava saltos condicionais e laços ineficientes, ao contrário do armazenamento flexível em memórias Flash ou ROM modernas.
+* **Aritmética Base 10:** Cálculos acumulativos realizados estritamente no sistema decimal mecânico (rodas dentadas), em oposição à lógica booleana e ao sistema binário universais de hoje.
