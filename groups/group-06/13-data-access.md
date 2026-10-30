@@ -1,6 +1,7 @@
 # 13. Seleção e Acesso aos Dados
 
 ## 13.1 Escopo e Exemplo Adotado
+Um operando é um valor, registrador ou referência a uma posição de memória utilizado por uma instrução durante sua execução. No ATmega328P, os operandos podem ser fornecidos diretamente na instrução, obtidos dos registradores de uso geral ou localizados na memória de dados por meio de endereços. Por exemplo, na instrução ADD R16, R17, os registradores R16 e R17 identificam os valores que serão somados, e o resultado é armazenado em R16. Quando os dados estão na memória, instruções específicas permitem acessá-los por endereçamento direto ou indireto, utilizando registradores como ponteiros para localizar suas posições. Também existem mecanismos para acessar posições específicas da memória de programa, como a Flash, por meio de instruções próprias. Esses recursos mostram como o processador identifica, seleciona e recebe os dados necessários para realizar uma operação. Entretanto, os mecanismos apresentados são características da implementação AVR do ATmega328P, e não regras obrigatórias de toda arquitetura Harvard. O princípio geral de Harvard está na separação entre memória de instruções e memória de dados, enquanto a quantidade de registradores, os modos de endereçamento, as instruções e as formas de acesso dependem de cada processador.
 
 ## 13.2 Localização dos Dados e dos Operandos
 
