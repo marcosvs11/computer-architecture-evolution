@@ -44,3 +44,4 @@ Microchip Technology Inc., AVR Instruction Set Manual. [Online]. Disponível em:
 Microchip Technology Inc., ATmega328P — 8-bit AVR Microcontroller. [Online]. Disponível em: página oficial do ATmega328P. Acesso em: 30 out. 2026.
 
 Arduino, UNO Rev3. [Online]. Disponível em: documentação oficial da placa. Acesso em: 30 out. 2026.
+https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
