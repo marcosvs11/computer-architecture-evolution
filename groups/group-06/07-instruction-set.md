@@ -21,9 +21,15 @@ As categorias apresentadas são uma seleção de exemplos da ISA AVR, não uma l
 ## 7.4 Codificação, Operandos e Endereçamento
 
 ## 7.5 Exemplo de Instrução ou Operação
+Para ilustrar o modelo de operação e o conjunto de instruções na arquitetura AVR do microcontrolador ATmega328P, toma-se como exemplo prático uma operação aritmética simples de adição entre um registador de trabalho e uma constante imediata, documentada no manual oficial da arquitetura:
 
-Write a simple Assembly program.
-
+1. **Instrução Utilizada:** `LDI` (Load Immediate) seguida de `ADD` ou `SUBI`. Especificamente, a instrução **`LDI Rd, K`** (Load Immediate) carrega uma constante imediata $K$ num registador de uso geral ($Rd$, compreendido entre R16 e R31).
+2. **Sequência de Execução da Operação de Soma:**
+   * **Passo 1 (Carregamento de Valores):** A instrução `LDI R16, 0x05` busca o valor imediato `0x05` da memória de programa e armazena-o diretamente no registador interno `R16`.
+   * **Passo 2 (Operação Aritmética):** Utiliza-se a instrução real **`ADD Rd, Rr`** (Add Registers) ou **`ADIW Rdl, K`** (Add Immediate to Word). Por exemplo, a instrução `ADD R16, R17` soma o conteúdo do registador `R17` ao registador `R16`.
+3. **Utilização de Valores e Destino do Resultado:** 
+   * Os operandos são obtidos diretamente a partir dos registadores internos de trabalho do processador.
+   * O resultado da operação aritmética é gravado de forma imediata no registador de destino (`Rd`, neste caso, o `R16`), atualizando simultaneamente as flags de estado no registador de estatísticas (SREG) conforme o resultado obtido (como flags de zero, negativo ou *carry*).
 ## 7.6 Relação com o Hardware e Limitações
 
 Compare with ARM or x86.
