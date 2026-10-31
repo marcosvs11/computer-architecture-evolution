@@ -13,6 +13,15 @@ Esses exemplos mostram maneiras distintas de selecionar operandos nesta ISA: por
 ## 13.4 Modos de Endereçamento e Mecanismos de Acesso
 
 ## 13.5 Exemplo de Seleção e Uso de um Dado
+Para ilustrar de forma concreta como um dado é selecionado e utilizado na arquitetura do microcontrolador ATmega328P, considera-se a operação de carregamento e manipulação de um valor utilizando uma instrução real documentada na ISA AVR:
 
+* **Instrução de Seleção:** `LDS Rd, k` (Load Direct from Data Space), que seleciona e carrega um valor diretamente de um endereço fixo da memória de dados (SRAM) para um registador de trabalho do processador[cite: 35].
+
+| Etapa | Instrução / Operação | Origem do Dado | Destino do Dado / Uso Posterior |
+| :--- | :--- | :--- | :--- |
+| **1. Seleção e Leitura** | `LDS R16, 0x0100`[cite: 35] | Endereço `0x0100` da memória de dados (SRAM) do ATmega328P. | O valor armazenado nesse endereço é lido e copiado para o registador de destino `R16`[cite: 35]. |
+| **2. Utilização Prática** | `ADD R17, R16` | O operando está agora guardado no registador interno `R16`[cite: 35]. | O valor é somado ao conteúdo do registador `R17`, atualizando o resultado e as flags de estado. |
+
+Este fluxo demonstra que, embora a organização Harvard garanta a separação física entre os caminhos de programa e de dados, a seleção e o endereçamento de um operando dentro da memória de dados seguem as regras específicas da arquitetura interna do microcontrolador escolhido[cite: 32, 35].
 ## 13.6 Limitações e Relação com a Organização Harvard
 
