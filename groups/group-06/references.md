@@ -45,3 +45,4 @@ Microchip Technology Inc., ATmega328P — 8-bit AVR Microcontroller. [Online]. D
 
 Arduino, UNO Rev3. [Online]. Disponível em: documentação oficial da placa. Acesso em: 30 out. 2026.
 https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
+- ATMEL CORPORATION. *ATmega328P 8-bit AVR Microcontroller with 32K Bytes In-System Programmable Flash Datasheet*. Document 7810D–AVR–01/15. San Jose: Atmel Corporation, 2015.
